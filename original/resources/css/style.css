@@ -3,9 +3,9 @@
  * Orange hover: #cf6d17
  */
 
-/* ----------------------------------------------
- * BASIC SETUP
- * ---------------------------------------------- */
+/* ---------------------------------------------- *\
+   BASIC SETUP
+\* ---------------------------------------------- */
 
  * {
    margin: 0;
@@ -24,9 +24,15 @@ body {
    overflow-x: hidden;
 }
 
-/* ----------------------------------------------
- * REUSABLE COMPONENT
- * ---------------------------------------------- */
+html { scroll-behavior: smooth; }
+
+
+
+
+
+/* ---------------------------------------------- *\
+   REUSABLE COMPONENT
+\* ---------------------------------------------- */
 
 .row {
    max-width: 1140px;
@@ -182,9 +188,13 @@ input[type="submit"]:active {
    color: #fff;
 }
 
-/* ----------------------------------------------
- * HEADER
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   HEADER
+\* ---------------------------------------------- */
 
 header {
    background-image: 
@@ -211,6 +221,16 @@ header {
    margin-top: 20px;
 }
 
+.logo-black { 
+   display: none; 
+   height: 50px;
+   width: auto;
+   float: left;
+   
+   margin-top: 5px;
+}
+
+/* Maim Navigation */
 .main-nav {
    float: right;
    list-style: none;
@@ -238,15 +258,47 @@ header {
    color: #e67e22;
 }
 
-/* ----------------------------------------------
- * FEATURES
- * ---------------------------------------------- */
+/* Sticky Navigation */
+.sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.98);
+   box-shadow: 0 2px 2px #efefef;
+   z-index: 9999;
+}
+
+.sticky .main-nav {
+   margin-top: 16px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nam li a:visited {
+   padding: 18px 0;
+   color: #555;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
+
+
+
+
+/* ---------------------------------------------- *\
+   FEATURES
+\* ---------------------------------------------- */
 
 .section-features .long-copy { margin-bottom: 30px; }
 
-/* ----------------------------------------------
- * MEALS SHOWCASE
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   MEALS SHOWCASE
+\* ---------------------------------------------- */
 
 .section-meals { padding: 0; }
 
@@ -281,9 +333,13 @@ header {
    transform: scale(1.03);
 }
 
-/* ----------------------------------------------
- * STEPS SECTION
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   STEPS SECTION
+\* ---------------------------------------------- */
 
 .section-steps { background: #f4f4f4; }
 
@@ -327,9 +383,13 @@ header {
    margin-right: 10px;
 }
 
-/* ----------------------------------------------
- * CITIES SECTION
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   CITIES SECTION
+\* ---------------------------------------------- */
 
 .box img {
    width: 100%;
@@ -339,9 +399,13 @@ header {
 
 .city-feature { margin-bottom: 5px; }
 
-/* ----------------------------------------------
- * TESTIMONIALS SECTION
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   TESTIMONIALS SECTION
+\* ---------------------------------------------- */
 
 .section-testimonials {
    background-image: 
@@ -383,9 +447,13 @@ cite img {
    vertical-align: middle;
 }
 
-/* ----------------------------------------------
- * PLANS SECTION
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   PLANS SECTION
+\* ---------------------------------------------- */
 
 .section-plans { background: #f4f4f4; }
 
@@ -431,9 +499,13 @@ cite img {
 
 .plan-box ul li { padding: 5px 0; }
 
-/* ----------------------------------------------
- * CONTACT SECTION
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   CONTACT SECTION
+\* ---------------------------------------------- */
 
 .contact-form {
    width: 60%;
@@ -456,9 +528,13 @@ input[type="checkbox"] { margin: 10px 5px 10px 0; }
 
 *:focus { outline: none; }
 
-/* ----------------------------------------------
- * FOOTER SECTION
- * ---------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------- *\
+   FOOTER SECTION
+\* ---------------------------------------------- */
 
 footer {
    background-color: #333;
@@ -525,3 +601,27 @@ footer p {
    text-align: center;
    margin-top: 20px;
 }
+
+
+
+
+
+/* ---------------------------------------------- *\
+   ANIMATIONS
+\* ---------------------------------------------- */
+
+.js-waypoint-1,
+.js-waypoint-2,
+.js-waypoint-3 { 
+   opacity: 0;
+   animation-duration: 1.5s;
+}
+
+.js.waypoint-4 { 
+   opacity: 1;
+   animation-duration: 1s;
+}
+
+.js-waypoint-1.animated,
+.js-waypoint-2.animated,
+.js-waypoint-3.animated { opacity: 1; }
